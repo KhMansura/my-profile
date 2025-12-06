@@ -27,3 +27,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.text-neon {
+  color: #00ffff;
+  text-shadow: 
+  0 0 5px #00ffff, 
+  0 0 10px #00ffff,
+  0 0 20px #00ffff;
+
+}
+.circle-neon {
+  position: relative;
+  box-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #234949,
+    0 0 40px #73ecec,
+    0 0 80px hwb(180 49% 7%);
+}
+.text-neon-light {
+  color: #00ffff;
+  text-shadow:
+    0 0 2px #00ffff,
+    0 0 4px hsl(180, 100%, 50%);
+}

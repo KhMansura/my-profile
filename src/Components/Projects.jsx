@@ -119,7 +119,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 bg-dark">
-      <h2 className="text-3xl font-semibold text-neonCyan text-center">
+      <h2 className="text-neon-light text-3xl font-semibold text-neonCyan text-center">
         Projects
       </h2>
       <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
