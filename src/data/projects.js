@@ -41,7 +41,7 @@ export const projects = [
     description: "A toy marketplace app with product listing, cart, and responsive UI.",
     live: "https://toytopia-a09-kh.netlify.app",
     github: "https://github.com/KhMansura/Toy-Topia",
-    image: "/projects/toytopia.png",
+    image: "/projects/toy-topia.png",
     stack: ["React", "Node.js", "MongoDB"]
   },
   {
@@ -51,7 +51,7 @@ export const projects = [
     live: "https://freelance-hub-a10.netlify.app",
     githubClient: "https://github.com/KhMansura/freelance_client",
     githubServer: "https://github.com/KhMansura/freelance_server",
-    image: "/projects/freelance.png",
+    image: "/projects/freelance-hub.png",
     stack: ["React", "Express", "MongoDB"]
   },
   {
@@ -60,7 +60,7 @@ export const projects = [
     description: "A hero-themed app store with modern UI and animations.",
     live: "https://hero-app-store-kh.netlify.app/",
     github: "https://github.com/KhMansura/hero-app-a08",
-    image: "/projects/hero.png",
+    image: "/projects/app-store.png",
     stack: ["React", "Tailwind"]
   },
   {
@@ -69,7 +69,7 @@ export const projects = [
     description: "A sweet shop app with product showcase and responsive design.",
     live: "https://sweets-slice.vercel.app/",
     github: "https://github.com/KhMansura/sweets-slice",
-    image: "/projects/sweets.png",
+    image: "/projects/Sweet-slice.png",
     stack: ["Next.js", "MongoDB"]
   },
   {
@@ -77,7 +77,7 @@ export const projects = [
     name: "Green Earth",
     description: "An eco-friendly themed project promoting sustainability.",
     live: "https://green-earth-kh-a06.netlify.app",
-    image: "/projects/green.png",
+    image: "/projects/green-earth.png",
     stack: ["React", "Tailwind"]
   }
 ];

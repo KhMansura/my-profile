@@ -43,11 +43,11 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.9 }}
       >
         <a
-          href="/resume.pdf"
+          href="/Kh Mansura - Resume 2025.12.04.pdf"
           download
-          className="px-4 py-2 bg-neonCyan text-black rounded shadow-neon hover:bg-cyan-400"
+          className="flex px-4 py-2 bg-neonCyan text-black rounded shadow-neon hover:bg-cyan-400"
         >
-        <FaDownload /> Download Resume 
+          <FaDownload /> Download Resume
         </a>
         <a
           href="#projects"
