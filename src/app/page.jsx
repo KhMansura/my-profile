@@ -63,13 +63,20 @@
 //     </div>
 //   );
 // }
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Skills from "../components/Skills";
-import Education from "../components/Education";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+// import Hero from "../components/Hero";
+// import About from "../components/About";
+// import Skills from "../components/Skills";
+// import Education from "../components/Education";
+// import Experience from "../components/Experience";
+// import Projects from "../components/Projects";
+// import Contact from "../components/Contact";
+import Hero from "@/Components/Hero";
+import About from "@/Components/About";
+import Skills from "@/Components/Skills";
+import Education from "@/Components/Education";
+import Experience from "@/Components/Experience";
+import Projects from "@/Components/Projects";
+import Contact from "@/Components/Contact";
 
 export default function HomePage() {
   return (
