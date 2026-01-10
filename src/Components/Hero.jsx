@@ -1,92 +1,104 @@
-"use client"; // client component for animation
+"use client";
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa6";
+import { Download, ArrowRight, Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-16 text-center">
-      {/* Profile Image with scale + fade */}
-      {/* <motion.img
-        src="/profile.jpg"
-        alt="Frontend Focused MERN Stack Developer"
-        className="p-8 mx-auto w-40 h-40 rounded-full ring-4 ring-neonPurple shadow-neon"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      /> */}
-     <div className="flex flex-col items-center justify-center gap-6">
-  {/* Circle with neon glow */}
-  <div className="circle-neon rounded-full border-4 border-teal-500 p-6 bg-gradient-to-br from-gray-900 to-black">
-    <h1 className="text-3xl md:text-4xl font-bold text-white text-center">KM</h1>
-  </div>
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 lg:px-20 pt-20">
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+        
+        {/* Left Side: Content  */}
+        <div className="lg:col-span-2 text-left space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-gray-500 font-black uppercase tracking-[0.3em] text-xs">
+              MERN Stack Developer
+            </span>
+            <h1 className="mt-4 text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white">
+              KHANDAKER <br /> MANSURA
+            </h1>
+          </motion.div>
 
-  </div>
+          <motion.p 
+            className="max-w-xl text-gray-400 text-lg md:text-xl leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            Crafting scalable web applications with a focus on high-end 
+            visuals and seamless user experiences. Turning complex logic into elegant interfaces.
+          </motion.p>
 
+          <motion.div 
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <a
+              href="/Kh Mansura - Resume 2025.12.04.pdf"
+              download
+              className="bg-white text-black px-8 py-4 rounded-full font-black uppercase tracking-tighter flex items-center gap-2 hover:bg-gray-200 transition-all active:scale-95 shadow-lg"
+            >
+              Resume <Download size={18} />
+            </a>
+            <a
+              href="#projects"
+              className="border border-white/10 text-white px-8 py-4 rounded-full font-black uppercase tracking-tighter flex items-center gap-2 hover:bg-white hover:text-black transition-all active:scale-95 backdrop-blur-sm"
+            >
+              Projects <ArrowRight size={18} />
+            </a>
+          </motion.div>
 
+          <motion.div 
+            className="flex gap-6 pt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <a href="https://github.com/KhMansura" target="_blank" className="text-gray-500 hover:text-white transition-colors">
+              <Github size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/kh-mansura/" target="_blank" className="text-gray-500 hover:text-white transition-colors">
+              <Linkedin size={24} />
+            </a>
+          </motion.div>
+        </div>
 
-      {/* Name with slide down */}
-      <motion.h1
-        className="mt-6 text-4xl font-bold"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      >
-        Khandaker Mansura
-      </motion.h1>
-
-      {/* Title with fade in */}
-      <motion.p
-        className="mt-2 text-neonCyan"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-      >
-        Junior MERN Stack Developer
-      </motion.p>
-
-      {/* Buttons with staggered animation */}
-      <motion.div
-        className="mt-4 flex justify-center gap-4"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-      >
-        <a
-          href="/Kh Mansura - Resume 2025.12.04.pdf"
-          download
-          className="text-neon
-          flex px-4 py-2 bg-neonCyan text-black rounded shadow-neon hover:bg-cyan-400"
+        {/* Right Side: Professional Image  */}
+        <motion.div 
+          className="relative hidden lg:block"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
         >
-          <FaDownload /> Download Resume
-        </a>
-        <a
-          href="#projects"
-          className="px-4 py-2 border border-neonCyan text-neonCyan rounded hover:bg-neonCyan hover:text-black"
-        >
-          View Projects
-        </a>
-      </motion.div>
+          {/* Bento-style Frame */}
+          {/* <div className="relative z-10 w-full aspect-circle rounded-[40px] overflow-hidden border border-white/10 bg-[#111111]/50 backdrop-blur-md p-4">
+            <img 
+              src="../../projects/profilePic.jpeg" 
+              alt="Khandaker Mansura"
+              className="w-full h-full object-cover rounded-[32px] grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div> */}
+          {/* Circular Frame Container */}
+<div className="relative z-10 w-full max-w-[400px] aspect-square rounded-full overflow-hidden border border-white/10 bg-[#111111]/50 backdrop-blur-md p-4 mx-auto">
+  <img 
+    src="../../projects/profilePic.jpeg" 
+    alt="Khandaker Mansura"
+  
+    className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700 scale-105 hover:scale-100"
+  />
+</div>
+          
+          <div className="absolute -inset-4 bg-white/5 blur-3xl -z-10 rounded-full" />
+        </motion.div>
 
-      {/* Social Links with fade + hover glow */}
-      <motion.div
-        className="mt-6 flex justify-center gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-      >
-        <a href="https://github.com/KhMansura" className="hover:text-neonCyan">
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kh-mansura/"
-          className="hover:text-neonCyan"
-        >
-          LinkedIn
-        </a>
-        {/* <a href="https://twitter.com/youruser" className="hover:text-neonCyan">
-          Twitter
-        </a> */}
-      </motion.div>
+      </div>
     </section>
   );
 }
+

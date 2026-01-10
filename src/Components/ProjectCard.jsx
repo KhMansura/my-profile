@@ -1,7 +1,7 @@
 import { projects } from "../data/projects";
 import Link from "next/link";
 
-export default function Projects() {
+export default function ProjectCard() {
   return (
     <section id="projects" className="py-16 bg-dark">
       <h2 className="text-3xl font-semibold text-neonCyan text-center">

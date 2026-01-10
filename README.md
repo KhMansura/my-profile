@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎨 Khandaker Mansura | MERN Stack Developer Portfolio
 
-## Getting Started
+Welcome to my professional portfolio built for **Programming Hero Assignment 4**. This project showcases my journey from a Fine Arts background at Dhaka University to becoming a technical-focused MERN stack developer.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Live Demo
+**[View Live Portfolio](https://your-vercel-link.vercel.app)** ---
+
+## ✨ Features & Requirements Fulfilled
+
+This portfolio was designed with a **Minimalist Bento Grid** aesthetic, focusing on clean UI and high-end animations.
+
+- **Requirement #2 & 5:** Detailed "About Me" showcasing my journey from an M.S. in Art to Web Development.
+- **Requirement #6:** Categorized Technical Stack (Frontend, Backend, Tools) with interactive graphical icons.
+- **Requirement #7 & 8:** Comprehensive Education and Experience timeline.
+- **Requirement #9:** 5+ Projects with dynamic routing. Each project includes:
+  - Technical Stack & Live Links
+  - Development Challenges Faced
+  - Future Improvement Plans
+- **Requirement #10:** Fully functional Contact section with Email, Phone, and Social integration.
+- **Requirement #12:** Responsive & Clean UI optimized for Mobile, Tablet, and Desktop using Tailwind CSS v4.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Tools & Technologies |
+| :--- | :--- |
+| **Frontend** | Next.js 16 (App Router), React 19, Tailwind CSS v4 |
+| **Backend** | Node.js, Express.js, MongoDB |
+| **Animations** | Framer Motion |
+| **Icons/UI** | Lucide React, React Icons, DaisyUI |
+| **Deployment** | Vercel |
+
+---
+
+## 📦 Getting Started
+
+To run this project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/KhMansura/my-portfolio.git](https://github.com/KhMansura/my-portfolio.git)
+
+2. **Install dependencies:**
+Bash
+
+npm install
+
+3. **Run the development server:**
+Bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open in browser:** Go to http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🎨 Design Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+As a graduate of Art & Creative Studies (Dhaka University), I believe that code is a medium for art. This portfolio utilizes:
 
-## Learn More
+- Glassmorphism: Frosted glass effects for card components.
 
-To learn more about Next.js, take a look at the following resources:
+- Bento Grid: A modular layout that organizes information into scannable blocks.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Dark Mode Only: A high-contrast aesthetic that reduces eye strain and looks premium.

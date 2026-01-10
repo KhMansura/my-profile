@@ -1,184 +1,59 @@
-// import { projects } from "../data/projects"
-// import Link from "next/link"
 
-// export default function Projects() {
-//   return (
-//     <section id="projects" className="py-16 bg-dark">
-//       <h2 className="text-3xl font-semibold text-neonCyan text-center">Projects</h2>
-//       <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-//         {projects.map((p) => (
-//           <div key={p.slug} className="bg-black/40 p-4 rounded-lg shadow-neon hover:scale-105 transition">
-//             <img src={p.image} alt={p.name} className="rounded-lg" />
-//             <h3 className="mt-4 text-xl">{p.name}</h3>
-//             <Link
-//               href={`/projects/${p.slug}`}
-//               className="mt-2 inline-block px-3 py-2 border border-neonCyan text-neonCyan rounded hover:bg-neonCyan hover:text-black"
-//             >
-//               View More / Details
-//             </Link>
-//           </div> // ✅ JSX block properly closed here
-//         ))}
-//       </div>
-//     </section>
-//   )
-// }
-// import { projects } from "../data/projects";
-// import Link from "next/link";
-
-// export default function Projects() {
-//   return (
-//     <section id="projects" className="py-16 bg-dark">
-//       <h2 className="text-3xl font-semibold text-neonCyan text-center">
-//         Projects
-//       </h2>
-//       <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-//         {projects.map((p) => (
-//           <div
-//             key={p.slug}
-//             className="bg-black/40 p-4 rounded-lg shadow-neon hover:scale-105 transition"
-//           >
-//             <h3 className="mt-4 text-xl font-semibold text-neonPurple">
-//               {p.name}
-//             </h3>
-//             <p className="mt-2 text-white/70 text-sm">{p.description}</p>
-//             <div className="mt-4 flex gap-3">
-//               {p.live && (
-//                 <a
-//                   href={p.live}
-//                   target="_blank"
-//                   className="px-3 py-2 bg-neonCyan text-black rounded hover:bg-cyan-400 transition"
-//                 >
-//                   Live
-//                 </a>
-//               )}
-//               {p.github && (
-//                 <a
-//                   href={p.github}
-//                   target="_blank"
-//                   className="px-3 py-2 border border-neonPurple text-neonPurple rounded hover:bg-neonPurple hover:text-black transition"
-//                 >
-//                   GitHub
-//                 </a>
-//               )}
-//               <Link
-//                 href={`/projects/${p.slug}`}
-//                 className="px-3 py-2 border border-neonCyan text-neonCyan rounded hover:bg-neonCyan hover:text-black transition"
-//               >
-//                 Details
-//               </Link>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
-// import { projects } from "../data/projects";
-// import Link from "next/link";
-
-// export default function Projects() {
-//     console.log("Projects data:", projects);
-
-//   return (
-//     <section id="projects" className="py-16 bg-dark">
-//       <h2 className="text-3xl font-semibold text-neonCyan text-center">Projects</h2>
-//       <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-//         {projects.map((p) => (
-//           <div key={p.slug} className="bg-black/40 p-4 rounded-lg shadow-neon hover:scale-105 transition">
-//             <h3 className="mt-4 text-xl font-semibold text-neonPurple">{p.name}</h3>
-//             <p className="mt-2 text-white/70 text-sm">{p.description}</p>
-//             <div className="mt-4 flex gap-3">
-//               {p.live && (
-//                 <a href={p.live} target="_blank" className="px-3 py-2 bg-neonCyan text-black rounded hover:bg-cyan-400 transition">
-//                   Live
-//                 </a>
-//               )}
-//               {p.github && (
-//                 <a href={p.github} target="_blank" className="px-3 py-2 border border-neonPurple text-neonPurple rounded hover:bg-neonPurple hover:text-black transition">
-//                   GitHub
-//                 </a>
-//               )}
-//               <Link href={`/projects/${p.slug}`} className="px-3 py-2 border border-neonCyan text-neonCyan rounded hover:bg-neonCyan hover:text-black transition">
-//                 Details
-//               </Link>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
-
-"use client";
-import { motion } from "framer-motion";
-import { projects } from "../data/projects";
+// Components/Projects.jsx
+import { projects } from "@/data/projects";
 import Link from "next/link";
 
 export default function Projects() {
-  console.log("Projects data:", projects);
-
   return (
-    <section id="projects" className="py-16 bg-dark">
-      <h2 className="text-neon-light text-3xl font-semibold text-neonCyan text-center">
-        Projects
-      </h2>
-      <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-        {projects.map((p, i) => (
-          <motion.div
-            key={p.slug}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-            className="bg-black/40 p-4 rounded-lg shadow-neon"
+    <section id="projects" className="py-20 px-4 lg:px-20">
+      <h2 className="text-4xl font-black mb-12">Selected Projects</h2>
+      
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((p) => (
+          <div 
+            key={p.slug} 
+            // PASTE THE CLASSNAME HERE:
+            className="bg-[#111111]/50 backdrop-blur-md border border-white/10 rounded-[32px] overflow-hidden hover:border-white/30 transition-all duration-500 group"
           >
             {/* Project Image */}
-            {p.image && (
-              <img
-                src={p.image}
-                alt={p.name}
-                className="rounded-lg w-full h-48 object-cover"
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={p.image} 
+                alt={p.name} 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
               />
-            )}
+            </div>
 
-            {/* Project Title */}
-            <h3 className="mt-4 text-xl font-semibold text-neonPurple">
-              {p.name}
-            </h3>
-
-            {/* Short Description */}
-            <p className="mt-2 text-white/70 text-sm">{p.description}</p>
-
-            {/* Links */}
-            <div className="mt-4 flex gap-3 flex-wrap">
-              {p.live && (
-                <a
-                  href={p.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-2 bg-neonCyan text-black rounded hover:bg-cyan-400 transition"
+            {/* Project Content */}
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
+              <p className="text-gray-400 mb-6 line-clamp-2">{p.description}</p>
+             
+<div className="flex flex-wrap gap-2 mb-4">
+  {p.stack.map((tech) => (
+    <span key={tech} className="text-[10px] font-bold px-2 py-1 bg-white/5 border border-white/10 rounded-md text-gray-400">
+      {tech}
+    </span>
+  ))}
+</div>
+              <div className="flex gap-4">
+                <Link 
+                  href={`/projects/${p.slug}`}
+                  className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition"
+                >
+                  Details
+                </Link>
+                <a 
+                  href={p.live} 
+                  target="_blank" 
+                  className="border border-white/10 px-6 py-2 rounded-full font-bold text-sm hover:bg-white hover:text-black transition"
                 >
                   Live
                 </a>
-              )}
-              {p.github && (
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-2 border border-neonPurple text-neonPurple rounded hover:bg-neonPurple hover:text-black transition"
-                >
-                  GitHub
-                </a>
-              )}
-              <Link
-                href={`/projects/${p.slug}`}
-                className="px-3 py-2 border border-neonCyan text-neonCyan rounded hover:bg-neonCyan hover:text-black transition"
-              >
-                Details
-              </Link>
+              </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

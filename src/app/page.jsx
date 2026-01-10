@@ -77,15 +77,24 @@ import Education from "@/Components/Education";
 import Experience from "@/Components/Experience";
 import Projects from "@/Components/Projects";
 import Contact from "@/Components/Contact";
+import History from "@/Components/History";
+import Preloader from "@/Components/Preloader";
+import ScrollArrow from "@/Components/ScrollArrow";
 
 export default function HomePage() {
   return (
     <main>
-      <Hero />
+      <Preloader />
+      <div className="relative h-screen">
+        <Hero />
+        <ScrollArrow />
+      </div>
+      {/* <Hero /> */}
       <About />
       <Skills />
-      <Education />
-      <Experience />
+      {/* <Education />
+      <Experience /> */}
+      <History />
       <Projects />
       <Contact />
     </main>
