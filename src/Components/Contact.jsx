@@ -123,15 +123,15 @@ export default function Contact() {
               <p className="text-sm font-medium break-all">iam.khmansura@yandex.com</p>
             </motion.a>
 
-            {/* Phone Card (Requirement #10) */}
+            {/* Phone Card */}
             <motion.a 
-              href="tel:+8801XXXXXXXXX" // Add your actual phone number here
+              href="tel:+8801756327145" 
               whileHover={{ y: -5 }}
               className="block p-6 bg-[#111111]/50 backdrop-blur-md border border-white/10 rounded-[24px] group hover:border-white/30 transition-all"
             >
               <Phone className="text-gray-500 mb-4 group-hover:text-white transition-colors" size={24} />
               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Call Me</p>
-              <p className="text-sm font-medium">+880 1XXX XXXXXX</p>
+              <p className="text-sm font-medium">+880 1756 327145</p>
             </motion.a>
 
             {/* Socials Grid */}
@@ -145,7 +145,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form (Requirement #10) */}
+          {/* Contact Form */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
